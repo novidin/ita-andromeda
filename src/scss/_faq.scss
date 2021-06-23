@@ -1,0 +1,64 @@
+/*-- FAQ --*/
+.faq-item {
+  width: 100%;
+  &__link {
+    margin-bottom: 34px;
+    padding: 28px;
+    position: relative;
+    // display: flex;
+    width: 100%;
+    background-color: #f7f7f7;
+    .faq-item__arrow {
+      width: 89px;
+      height: 21px;
+      position: absolute;
+      bottom: -20px;
+      & svg {
+        fill: #f7f7f7;
+      }
+    }
+    .faq-item__title p {
+      text-align: left;
+      font-size: 15px;
+      &::before {
+        content: "Q. ";
+        font-family: "Lato-Bold", sans-serif;
+      }
+    }
+    &:hover,
+    &_active {
+      background-color: #431d91;
+      .faq-item__arrow {
+        & svg {
+          fill: #431d91;
+        }
+      }
+      .faq-item__title {
+        color: #fff;
+      }
+    }
+  }
+  .faq-item__body {
+    margin-bottom: 20px;
+    padding: 36px 59px 34px 32px;
+    text-align: left;
+    font-size: 15px;
+    line-height: 2;
+    border: solid 1px #ebebeb;
+    & p::before {
+      content: "A.";
+      font-family: "Lato-Bold", sans-serif;
+    }
+  } 
+ 
+  
+}
+
+// &::before {
+//   content: "";
+//   margin: 0 auto;
+//   display: block;
+//   width: 89px;
+//   height: 21px;
+//   background: url("../media/img/testimonials/arrowUp-testimonial.png") center top/ cover no-repeat;
+// }

@@ -1,0 +1,42 @@
+@import "lib/normalize.scss";
+@import 'lib/swiper.scss';
+@import "mixins";
+/*===== fonts =====*/
+@import "fonts";
+/*===== settings =====*/
+@import "settings";
+/*===== main =====*/
+/*-- HEADER --*/
+.header {
+  padding: 45px 50px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .nav {
+    display: flex;
+
+    &__link {
+      margin-right: 40px;
+      color: #313131;
+      transition: text-shadow 1s;
+      &:hover {
+        color: #431d91;
+        text-shadow: 1px 0px #431d91;
+      }
+    }
+  }
+
+    
+
+  &__burger {
+    display: none;
+  }
+}
+
+@include breadcrumbs("/media/img/testimonials/bg-breadcrumbs.jpg");
+
+
+@import "testimonials";
+@import "faq";
+
+@import "footer";

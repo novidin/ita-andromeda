@@ -1,0 +1,105 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  font-family: "Lato-Regular", sans-serif;
+  font-size: 16px;
+  color: #313131;
+  background-color: #fff;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+// !!!!FOCUS
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.wrapper {
+  max-width: 1188px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+  box-sizing: border-box;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.page {
+  padding: 100px 0;
+  text-align: center;
+  title {
+    margin-bottom: 20px;
+    font-size: 28px;
+  }
+	.subtitle {
+		margin-bottom: 70px;
+	}
+}
+
+// .is-outer {
+//   position: relative !important; // stylelint-disable-line declaration-no-important
+//   left: -9999px !important; // stylelint-disable-line declaration-no-important
+// }
+
+// .site-container {
+//   overflow: hidden;
+// }
+
+// .is-hidden {
+//   display: none !important; // stylelint-disable-line declaration-no-important
+// }
+
+// .for-mobile {
+//   display: none;
+
+//   @include mobile {
+//     display: block;
+//   }
+// }
+
+// .error {
+//   border: 2px #ff4019 solid !important; // stylelint-disable-line declaration-no-important
+// }
+
+.btn-reset {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+// .container {
+//   margin: 0 auto;
+//   padding: 0 15px;
+//   max-width: 1200px;
+// }
+
+// .js-focus-visible :focus:not(.focus-visible) {
+//   outline: none;
+// }
