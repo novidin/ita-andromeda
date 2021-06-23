@@ -1,64 +1,95 @@
 /*-- TESTIMONIALS --*/
-.slider {
-	position: relative;
-}
+.testimonials {
+	.slider {
+		position: relative;
+	}
 
-.slider-nav {
+	.slider-nav {
+		overflow: hidden;
+		width: 990px;
+		margin: 0 auto 29px;
+		flex-shrink: 0;
+		height: 250px;
+	}
+
+	.slider-main {
+		overflow: hidden;
+		// height: 500px;
+		&::before {
+			content: "";
+			margin: 0 auto;
+			display: block;
+		width: 89px;
+		height: 21px;
+			background: url("../media/img/testimonials/arrowUp-testimonial.png") center top/ cover no-repeat;
+		}
+	}
+
+	.slider-nav .swiper-slide {
+		/* width: 100px; */
+		height: 195px;
+		/* Затьемнение */
+		opacity: 0.5;
+		transition: 0.5s;
+	}
 	
-	overflow: hidden;
-	width: 990px;
-	margin: 0 auto 50px;
-	flex-shrink: 0;
-	height: 250px;
-}
-
-.slider-main {
-	overflow: hidden;
-	// height: 500px;
-	&::before {
-		content: "";
-		margin: 0 auto;
+	.slider-nav .swiper-slide-active {
+		opacity: 1;
+		transition: 0.5s;
+	}
+	
+	.slider-nav .swiper-slide img {
 		display: block;
-    width: 89px;
-    height: 21px;
-		background: url("../media/img/testimonials/arrowUp-testimonial.png") center top/ cover no-repeat;
+		margin: 0 auto;
+		max-height: 100%;
+		border-radius: 50%;
+	}
+	
+	.slider-nav .swiper-slide p {
+		font-family: "Lato-Bold", sans-serif;
+		text-transform: uppercase;
+	}
+	
+	.testimonial {
+		margin: 0 auto;
+		padding: 52px;
+		max-width: 650px;
+		background-color: #f6f6f6;
+		.text {
+			margin: 0 0 10px;
+			font-family: "Lato-LightItalic", sans-serif;
+			font-size: 24px;
+			line-height: 1.7;
+		}
+		.author {
+			margin: 0;
+			font-size: 18px;
+			// font-family: "Lato-Bold", sans-serif;
+		}
+	}
+	
+	.swiper-button-prev,
+	.swiper-button-next {
+		top: 20%;
+		color: #dddddd;
+		background-color: transparent;
+	  border: none;
+		&:hover {
+			color: #431d91;
+		}
+	}
+	
+	.swiper-button-prev {
+		left: 0;
+	}
+	
+	.swiper-button-next {
+		right: 0;
 	}
 }
 
-.slider-nav .swiper-slide {
-	/* width: 100px; */
-	height: 195px;
-	/* Затьемнение */
-	opacity: 0.5;
-	transition: 0.5s;
-}
 
-.slider-nav .swiper-slide-active {
-	opacity: 1;
-	transition: 0.5s;
-}
 
-.slider-nav .swiper-slide img {
-	display: block;
-	margin: 0 auto;
-	max-height: 100%;
-	border-radius: 50%;
-}
 
-.testimonial {
-	margin: 0 auto;
-	padding: 59px 55px 54px 49px;
-	max-width: 750px;
-	background-color: #f6f6f6;
-}
 
-.swiper-button-prev,
-.swiper-button-next {
-	top: 13%;
-	color: #dddddd;
-	background-color: transparent;
-  border: none;
-	&:hover {
-		color: #431d91;
-	}
-}
+
