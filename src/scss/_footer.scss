@@ -14,12 +14,17 @@
   }
   .footer__nav {
     background-color: #262626;
+    .wrapper {
+      padding: 25px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
   }
   .nav {
-    padding: 25px 0;
     display: flex;
     &__link {
-      margin-left: 40px;
+      margin-right: 40px;
       color: #565555;
       transition: text-shadow 1s;
       &:hover {
@@ -28,7 +33,9 @@
       }
     }
   }
-  &__burger {
+
+  .footer__burger {
     display: none;
   }
+  
 }

@@ -1,0 +1,24 @@
+
+/*-- BREADCRUMBS --*/
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  text-transform: uppercase;
+  //#{$bgPath}../img/testimonials/bg-breadcrumbs.jpg
+  // background-attachment: fixed;
+  h1 {
+    margin: 0px;
+    font-family: "Lato-Hairline", sans-serif;
+    font-size: 160px;
+    font-weight: 100;
+    // font-stretch: normal;
+    // font-style: normal;
+    line-height: 0.24;
+    letter-spacing: 2px;
+    color: #ffffff;
+  }
+}

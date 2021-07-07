@@ -1,0 +1,177 @@
+@media all and (max-width:1100px) {
+  .features-items .swiper-wrapper{
+  column-gap: 20px;
+  row-gap: 10px;
+  }
+  .i-pad{
+    position: relative;
+  } 
+  
+  .skills-and-offer .wrapper {
+    display: block;
+  }
+  .skills {
+    margin-bottom: 60px;
+  }
+
+  .breadcrumbs h1 {
+    font-size: 100px;
+  }
+}
+
+@media all and (max-width:991px) {
+  @include burger("header__burger", "header__nav", "#313131", "rgba(255, 255, 255, 0.9)");
+}
+
+@media all and (max-width:768px) {
+.hero-features .wrapper {
+  flex-wrap: wrap;
+  justify-content: center;
+  .hero-features-card {
+    margin-bottom: 50px;
+  }
+  
+}
+
+
+  .footer .footer__nav .wrapper {
+    justify-content: flex-end;
+  }
+  .footer .footer__burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    position: relative;
+    z-index: 103;
+      &::before,
+      &::after {
+        content: '';
+        background-color: #565555;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all 0.3s ease 0s;
+      }
+      span{
+        position: absolute;
+        background-color: #565555;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        top: 9px;
+        /* transition: all 0.3s ease 0s; */
+      }
+      &::before {
+        top: 0;
+      }
+      &::after {
+        bottom: 0;
+      }
+      &.active span{
+        transform: scale(0);
+      }
+      &.active::before{
+        transform: rotate(45deg);
+        top: 9px;
+      }
+      &.active::after{
+        transform: rotate(-45deg);
+        bottom: 9px;
+      }
+    }
+
+    .breadcrumbs {
+      height: 100px;
+      h1 {
+        font-size: 50px;
+      }
+    }
+
+    .footer .nav {
+      display: none;
+    }
+  // @include burger("footer__burger", "footer__nav", "red", "rgba(255, 255, 255, 0.9)");
+}
+
+@media all and (min-width:600px) {
+  .meet-youniverse .features-item:nth-child(odd) {
+    justify-self: end;
+    text-align: right;
+    .features-item-title{
+      flex-direction: row-reverse;
+    }
+    .features-item-icon {
+      margin-right: 0;
+      margin-left: 18px;
+    }
+    p {
+      text-align: right;
+    }
+  }
+}
+
+@media all and (max-width:510px) {
+  .header {
+    padding: 30px;
+  }
+  .meet-youniverse .swiper-wrapper {
+    display: flex;
+		justify-content: initial;
+		flex-wrap: nowrap;
+    column-gap: 0;
+    row-gap: 0;
+	}
+
+  .meet-youniverse .features-item {
+		max-width: 100%;
+		// margin-left: 25px;
+		flex-shrink: 0;
+	}
+
+  .meet-youniverse .slider-buttons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .meet-youniverse .swiper-button-prev,
+  .meet-youniverse .swiper-button-next {
+  position: static;
+  top: 94%;
+}
+
+.meet-youniverse .swiper-button-prev {
+  left: 14px;
+}
+
+.meet-youniverse .swiper-button-next {
+  right: 14px;
+}
+
+.meet-youniverse .slider-buttons .swiper-button-prev::after,
+.meet-youniverse .slider-buttons .swiper-button-next::after {
+  content: '\2192'; 
+  color: #622ad1;
+  font-size: 32px;
+}
+.meet-youniverse .slider-buttons .swiper-button-prev::after{
+  content: '\2190';
+}
+
+.skills-and-offer {
+  text-align: center;
+}
+
+  .offer {
+    padding-left: 16px;
+    .content {
+      display: block;
+    }
+  }
+
+  .breadcrumbs h1 {
+    font-size: 28px;
+  }
+}

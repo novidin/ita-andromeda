@@ -15,6 +15,10 @@ const ttf2woff = require('gulp-ttf2woff');
 const ttf2woff2 = require('gulp-ttf2woff2');
 const fileInclude = require('gulp-file-include');
 const htmlbeautify = require('gulp-html-beautify');
+const svgSprite = require('gulp-svg-sprite');
+const svgmin = require('gulp-svgmin');
+const cheerio = require('gulp-cheerio');
+const replace = require('gulp-replace');
 
 let fs = require('fs');
 let source = './src';
@@ -123,6 +127,42 @@ function images() {
     .pipe(dest(build + '/media/img/'))
 }
 
+function svgSprites() {
+    return src(source + '/media/icons/*.svg')
+    // minify svg
+		.pipe(svgmin({
+			js2svg: {
+				pretty: true
+			}
+		}))
+		// remove all fill, style and stroke declarations in out shapes
+		.pipe(cheerio({
+			run: function ($) {
+				$('[fill]').removeAttr('fill');
+				$('[stroke]').removeAttr('stroke');
+				$('[style]').removeAttr('style');
+			},
+			parserOptions: {xmlMode: true}
+		}))
+		// cheerio plugin create unnecessary string '&gt;', so replace it.
+		.pipe(replace('&gt;', '>'))
+		// build svg sprite
+		.pipe(svgSprite({
+			mode: {
+				symbol: {
+					sprite: "../sprite.svg",
+					// render: {
+					// 	scss: {
+					// 		dest:'../../../sass/_sprite.scss',
+					// 		template: assetsDir + "sass/templates/_sprite_template.scss"
+					// 	}
+					// }
+				}
+			}
+		}))
+    .pipe(dest(build + '/media/icons/'))
+}
+
 function cleanimg() {
     return del(build + '/media/img/**/*', { force: true })
 }
@@ -145,9 +185,10 @@ exports.fontsStyle = fontsStyle;
 exports.scripts = scripts;
 exports.images = images;
 exports.cleanimg = cleanimg;
+exports.svgSprites = svgSprites;
 
 
 exports.build = series(cleandist, styles, scripts, images);
-exports.default = parallel(cleandist, html, series(styleLibs, styles), scripts, series(fonts, fontsStyle, styles), series(images, html), browsersync, startWatch);
+exports.default = parallel(cleandist, html, series(styleLibs, styles), scripts, series(fonts, fontsStyle, styles), series(images, html), svgSprites, browsersync, startWatch);
 
 //let ffont = gulp.series(fonts, fontsStyle)

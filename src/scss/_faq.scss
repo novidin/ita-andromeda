@@ -1,4 +1,9 @@
 /*-- FAQ --*/
+@import "breadcrumbs";
+.breadcrumbs.faq {
+  background: url("../media/img/faq/bg-breadcrumbs.jpg") center top/ cover no-repeat;
+}
+
 .faq-item {
   width: 100%;
   &__link {

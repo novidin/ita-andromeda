@@ -1,12 +1,18 @@
 /*-- TESTIMONIALS --*/
+@import "breadcrumbs";
+.breadcrumbs.testimonials {
+  background: url("../media/img/testimonials/bg-breadcrumbs.jpg") center top/ cover no-repeat;
+}
+
 .testimonials {
+
 	.slider {
 		position: relative;
 	}
 
 	.slider-nav {
 		overflow: hidden;
-		width: 990px;
+		max-width: 990px;
 		margin: 0 auto 29px;
 		flex-shrink: 0;
 		height: 250px;
