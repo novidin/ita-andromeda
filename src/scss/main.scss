@@ -15,7 +15,6 @@
   .header-logo {
     width: 183px;
    }
-  
   &-burger {
     display: none;
   }
@@ -23,7 +22,6 @@
 
 .header-nav {
   .nav {
-    display: flex;
     &-link {
       color: #313131;
       transition: text-shadow 1s;
@@ -32,28 +30,18 @@
         text-shadow: 1px 0px #431d91;
       }
     }
-    li {
-    margin-right: 40px;
-      &:last-child {
-        margin-right: 0;
-      }
-    }  
-    
   }
 }    
-  
 
-// .slider-hero .swiper-slide {
-//   box-sizing: border-box; // <-- needed to compensate for padding
-//   display: flex;
-//   align-items: center;
-//   padding: 1%;
-//   img {
-//     width: 100%;  // <-- set width
-//     height: 100%; // <-- set height
-//     object-fit: contain; // <-- makes sure image fits 100% x 100%x
-//   }
-// }
+.nav {
+  display: flex;
+  li {
+    margin: 0 20px;
+      // &:last-child {
+      //   margin-right: 0;
+      // }
+    }  
+}
 
 .hero .slider-hero {
   width: 100%;
@@ -548,8 +536,6 @@
     width: 55px;
   }
 
-
-
   /*-- good-looking-gesign --*/
   .good-looking-design {
     
@@ -593,12 +579,8 @@
       display: flex;
       justify-content: flex-start;
     }
-    // .title {
-    //   // background: rgba(250, 250, 250, 0.9);
-    // }
     .subtitle {
       margin-bottom: 40px;
-      // background: rgba(250, 250, 250, 0.9);
     }
     .useful-content {
       width: 50%;
@@ -684,14 +666,12 @@
     }
 
     .plan-link:hover {
-      // justify-content: space-between;
       background-color: #552fa3;
     }
 
     .read-more:hover::after {
       margin-left: 53%
     }
-
   }
 
 @import "page-title";
