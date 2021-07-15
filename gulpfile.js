@@ -127,6 +127,11 @@ function images() {
     .pipe(dest(build + '/media/img/'))
 }
 
+function video() {
+    return src(source + '/media/video/**/*')
+    .pipe(dest(build + '/media/video/'))
+}
+
 function svgSprites() {
     return src(source + '/media/icons/*.svg')
     // minify svg
@@ -184,11 +189,12 @@ exports.fonts = fonts;
 exports.fontsStyle = fontsStyle;
 exports.scripts = scripts;
 exports.images = images;
+exports.video = video;
 exports.cleanimg = cleanimg;
 exports.svgSprites = svgSprites;
 
 
 exports.build = series(cleandist, styles, scripts, images);
-exports.default = parallel(cleandist, html, series(styleLibs, styles), scripts, series(fonts, fontsStyle, styles), series(images, html), svgSprites, browsersync, startWatch);
-
-//let ffont = gulp.series(fonts, fontsStyle)
+exports.default = parallel(cleandist, html, series(styleLibs, styles), scripts, video, series(fonts, fontsStyle, styles), series(images, html), svgSprites, browsersync, startWatch);
+//exports.default = series(cleandist, html, styleLibs, styles, scripts, video, fonts, fontsStyle, styles, images, html, svgSprites, browsersync, startWatch);
+//let ffont = gulp.series(fonts, fontsStyle) 

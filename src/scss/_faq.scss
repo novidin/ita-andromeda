@@ -1,19 +1,18 @@
 /*-- FAQ --*/
-@import "breadcrumbs";
-.breadcrumbs.faq {
-  background: url("../media/img/faq/bg-breadcrumbs.jpg") center top/ cover no-repeat;
+.page-title.faq {
+  background: url("../media/img/faq/bg-page-title.jpg") center top/ cover no-repeat;
 }
 
 .faq-item {
   width: 100%;
-  &__link {
+  &-link {
     margin-bottom: 34px;
     padding: 28px;
     position: relative;
     // display: flex;
     width: 100%;
     background-color: #f7f7f7;
-    .faq-item__arrow {
+    .faq-item-arrow {
       width: 89px;
       height: 21px;
       position: absolute;
@@ -22,7 +21,7 @@
         fill: #f7f7f7;
       }
     }
-    .faq-item__title p {
+    .faq-item-title p {
       text-align: left;
       font-size: 15px;
       &::before {
@@ -31,19 +30,19 @@
       }
     }
     &:hover,
-    &_active {
+    &-active {
       background-color: #431d91;
-      .faq-item__arrow {
+      .faq-item-arrow {
         & svg {
           fill: #431d91;
         }
       }
-      .faq-item__title {
+      .faq-item-title {
         color: #fff;
       }
     }
   }
-  .faq-item__body {
+  .faq-item-body {
     margin-bottom: 20px;
     padding: 36px 59px 34px 32px;
     text-align: left;

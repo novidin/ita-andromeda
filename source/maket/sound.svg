@@ -1,0 +1,33 @@
+<svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="21px" height="16px">
+<defs>
+<filter filterUnits="userSpaceOnUse" id="Filter_0" x="0px" y="0px" width="21px" height="16px"  >
+    <feOffset in="SourceAlpha" dx="0.5" dy="0.866" />
+    <feGaussianBlur result="blurOut" stdDeviation="0" />
+    <feFlood flood-color="rgb(255, 255, 255)" result="floodOut" />
+    <feComposite operator="atop" in="floodOut" in2="blurOut" />
+    <feComponentTransfer><feFuncA type="linear" slope="0.81"/></feComponentTransfer>
+    <feMerge>
+    <feMergeNode/>
+    <feMergeNode in="SourceGraphic"/>
+  </feMerge>
+</filter>
+<filter id="Filter_1">
+    <feOffset in="SourceAlpha" dx="0.5" dy="0.866" />
+    <feGaussianBlur result="blurOut" stdDeviation="1.414" />
+    <feFlood flood-color="rgb(0, 1, 1)" result="floodOut" />
+    <feComposite operator="out" in="floodOut" in2="blurOut" result="compOut" />
+    <feComposite operator="in" in="compOut" in2="SourceAlpha" />
+    <feComponentTransfer><feFuncA type="linear" slope="0.75"/></feComponentTransfer>
+    <feBlend mode="multiply" in2="SourceGraphic" />
+</filter>
+
+</defs>
+<g filter="url(#Filter_0)">
+<g filter="url(#Filter_1)">
+<path fill-rule="evenodd"  fill="rgb(79, 79, 79)"
+ d="M16.084,11.777 C15.975,11.931 15.747,12.023 15.509,12.022 C15.421,12.022 15.330,12.009 15.243,11.983 C14.925,11.882 14.790,11.627 14.939,11.413 C16.131,9.700 16.724,7.855 16.724,6.006 C16.724,4.158 16.130,2.313 14.939,0.601 L14.942,0.601 C14.794,0.387 14.928,0.131 15.243,0.032 C15.557,-0.069 15.934,0.021 16.084,0.237 C17.352,2.065 17.991,4.035 17.991,6.007 C17.991,7.979 17.352,9.950 16.084,11.777 ZM13.292,9.742 C13.224,9.742 13.155,9.736 13.087,9.719 C12.757,9.643 12.582,9.399 12.695,9.176 C13.217,8.153 13.480,7.076 13.481,5.999 C13.481,4.927 13.222,3.858 12.704,2.846 C12.589,2.623 12.765,2.379 13.092,2.304 C13.420,2.225 13.780,2.343 13.895,2.566 C14.465,3.671 14.744,4.835 14.743,5.999 C14.744,7.171 14.455,8.342 13.892,9.454 C13.801,9.632 13.555,9.742 13.292,9.742 ZM10.640,8.149 C10.592,8.149 10.544,8.146 10.496,8.138 C10.156,8.084 9.941,7.855 10.022,7.625 C10.206,7.091 10.301,6.546 10.300,6.002 C10.301,5.462 10.211,4.921 10.028,4.397 L10.030,4.397 C9.951,4.165 10.161,3.936 10.499,3.884 C10.838,3.829 11.176,3.971 11.257,4.202 C11.460,4.793 11.562,5.396 11.564,6.002 C11.561,6.612 11.458,7.222 11.254,7.819 C11.186,8.016 10.925,8.149 10.640,8.149 ZM7.115,11.318 C6.409,10.862 4.626,9.335 3.555,8.401 L0.363,8.401 C0.155,8.401 -0.014,8.231 -0.014,8.021 L-0.014,3.984 C-0.014,3.775 0.155,3.604 0.363,3.604 L3.484,3.604 C4.547,2.677 6.393,0.755 7.115,0.289 C8.015,-0.293 8.130,0.689 8.130,0.689 L8.130,5.687 L8.127,6.176 L8.130,10.917 C8.130,10.917 8.015,11.899 7.115,11.318 Z"/>
+</g></g>
+</svg>

@@ -1,6 +1,6 @@
 
 /*-- BREADCRUMBS --*/
-.breadcrumbs {
+.page-title {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,7 +17,7 @@
     font-weight: 100;
     // font-stretch: normal;
     // font-style: normal;
-    line-height: 0.24;
+    line-height: 1;
     letter-spacing: 2px;
     color: #ffffff;
   }

@@ -1,0 +1,152 @@
+.page-title.portfolio {
+  background: url("../media/img/portfolio/bg-title-page.jpg") center top/ cover no-repeat;
+}
+
+.filter-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  li {
+    margin-left: 10px;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.filter-btn {
+  margin-bottom: 5px;
+  padding: 12px 18px;
+  font-family: "Lato-Bold", sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  border: solid 1px #e4e4e4;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  color: #fff;
+  background-color: #431d91;
+  border: none;
+}
+
+.portfolio-cards {
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: repeat( auto-fill, minmax(270px, 1fr) );
+  border-bottom: 1px solid #ededed;
+  
+}
+
+.portfolio-card {
+  margin-bottom: 50px;
+  width: 267px;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  text-align: left;
+  h4{
+    margin: 20px 0;
+    font-size: 24px;
+  }
+  .tag {
+    font-family: "Lato-Bold", sans-serif;
+  }
+  .body {
+    flex-grow: 1;
+  }
+}
+.portfolio-card-image {
+  width: 100%;
+  height: 259px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  ::after {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../media/img/portfolio/icon-cross.png") no-repeat center;
+  }
+  ::before {
+    content: '';
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(67, 29, 145, .7);
+  }
+  :hover::before,
+  :hover::after {
+    top: 0;
+  }
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.page-nums,
+.next-prev-btns {
+  display: flex;
+  align-items: center;
+  li {
+    margin-left: 10px;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.page-num-btn,
+.prev-btn,
+.next-btn {
+  padding: 12px 18px;
+  font-size: 14px;
+  color: #9b9a9a;
+  border: solid 1px #d6d6d6;
+}
+
+.prev-btn {
+  margin-right: 15px;
+  &::before {
+    content: '\2190';
+    margin-right: 14px;
+    transition: 1s;
+  }
+  // &:hover::before {
+  //   margin-right: 20px;
+  // }
+}
+
+.next-btn {
+  &::after {
+    content: '\2192';
+    margin-left: 14px;
+    transition: 1s;
+  }
+  // &:hover::after {
+  //   margin-left: 20px;
+  // }
+}
+
+.page-num-btn.active {
+  color: #431d91;
+  border: solid 1px #431d91;
+}
+
