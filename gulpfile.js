@@ -172,8 +172,19 @@ function cleanimg() {
     return del(build + '/media/img/**/*', { force: true })
 }
 
+function copyCss() {
+    return src(source + '/css/**/*')
+    .pipe(dest(build + '/css/'))
+}
+
+function copyFavicon() {
+    return src(source + '/favicon.*')
+    .pipe(dest(build + '/'))
+}
+
 function startWatch() {
     watch([source + '/scss/main.scss'], styles);
+    watch([source + '/css/**/*.css'], copyCss);
     watch([source + '/scripts/**/*.js'], scripts);
     //watch(source + '/**/*.html').on('change', browserSync.reload);
     watch([source + '/**/*.html'], html);
@@ -190,11 +201,13 @@ exports.fontsStyle = fontsStyle;
 exports.scripts = scripts;
 exports.images = images;
 exports.video = video;
+exports.copyCss = copyCss;
+exports.copyFavicon = copyFavicon;
 exports.cleanimg = cleanimg;
 exports.svgSprites = svgSprites;
 
 
 exports.build = series(cleandist, styles, scripts, images);
-exports.default = parallel(cleandist, html, series(styleLibs, styles), scripts, video, series(fonts, fontsStyle, styles), series(images, html), svgSprites, browsersync, startWatch);
+exports.default = series(cleandist, parallel(html, series(styleLibs, styles), scripts, video, series(fonts, fontsStyle, styles), series(images, html), svgSprites, copyCss, copyFavicon, browsersync, startWatch));
 //exports.default = series(cleandist, html, styleLibs, styles, scripts, video, fonts, fontsStyle, styles, images, html, svgSprites, browsersync, startWatch);
 //let ffont = gulp.series(fonts, fontsStyle) 

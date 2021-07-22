@@ -2,8 +2,9 @@
 <html lang="en">
 @include("parts/head.html", {"page" : "homepage"})
 
-<body id="homepage">
+<body id="home">
     @include('parts/header.html')
+   <main>
     <section class="hero">
         <div class="slider-container">
             <div class="slider-top">
@@ -167,10 +168,10 @@
         <div class="wrapper">
             <div class="skills">
                 <h2 class="title">Our Skills</h2>
-                <div class="bar basic" data-skill="Photoshop"></div>
-                <div class="bar intermediate" data-skill="html"></div>
-                <div class="bar learning" data-skill="indesign"></div>
-                <div class="bar front advanced" data-skill="Hard Work"></div>
+                <div class="bar basic loadable" data-skill="Photoshop"></div>
+                <div class="bar intermediate loadable" data-skill="html"></div>
+                <div class="bar learning loadable" data-skill="indesign"></div>
+                <div class="bar front advanced loadable" data-skill="Hard&nbsp;Work"></div>
             </div>
             <div class="offer">
                 <h2 class="title">What We Offer</h2>
@@ -198,29 +199,24 @@
                             </video>
                         </div>
                         <div class="video swiper-slide">
-                            <video preload="metadata">
-                                <source src="./media/video/meeting-2005.mp4" type="video/mp4">
-                            </video>
+                            <video src="#" data-src="./media/video/meeting-2005.mp4" class="swiper-lazy"></video>
+                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </div>
                         <div class="video swiper-slide">
-                            <video preload="metadata">
-                                <source src="./media/video/meeting-2007.mp4" type="video/mp4">
-                            </video>
+                            <video src="#" data-src="./media/video/meeting-2007.mp4" class="swiper-lazy"></video>
+                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </div>
                         <div class="video swiper-slide">
-                            <video preload="metadata">
-                                <source src="./media/video/meeting-2012.mp4" type="video/mp4">
-                            </video>
+                            <video src="#" data-src="./media/video/meeting-2012.mp4" class="swiper-lazy"></video>
+                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </div>
                         <div class="video swiper-slide">
-                            <video preload="metadata">
-                                <source src="./media/video/meeting-2103.mp4" type="video/mp4">
-                            </video>
+                            <video src="#" data-src="./media/video/meeting-2013.mp4" class="swiper-lazy"></video>
+                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </div>
                         <div class="video swiper-slide">
-                            <video preload="metadata">
-                                <source src="./media/video/meeting-2105.mp4" type="video/mp4">
-                            </video>
+                            <video src="#" data-src="./media/video/meeting-2015.mp4" class="swiper-lazy"></video>
+                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </div>
                     </div>
                     <div class="play-btn">
@@ -230,11 +226,6 @@
                     </div>
                 </div>
                 <div class="video-controls">
-                    <!-- <button class="pause player-control hidden">
-                        <svg>
-                            <use xlink:href="./media/icons/sprite.svg#pause"></use>
-                        </svg>
-                    </button> -->
                     <button class="play player-control">
                         <svg class="icon-play">
                             <use xlink:href="./media/icons/sprite.svg#play"></use>
@@ -258,7 +249,6 @@
                         <svg>
                             <use xlink:href="./media/icons/sprite.svg#sound"></use>
                         </svg>
-                        <!-- <progress value='40' max='100' class='sound-bar'></progress> -->
                         <input type='range' value='100' max='100' class='sound-bar'>
                     </div>
                     <button class="twitter player-control">
@@ -302,7 +292,7 @@
                 <h2 class="title">Good-Looking Design</h2>
                 <p class="subtitle">Success is nothing more than a few simple disciplines, practiced every day. </p>
                 <div class="design-features-items">
-                    <div class="features-item white">
+                    <div class="features-item white loadable">
                         <div class="features-item-title">
                             <div class="features-item-icon">
                                 <svg>
@@ -314,7 +304,7 @@
                         <p>Phasellus blandit est nulla, at placerat viverra et. Cras eu libero porttitor.</p>
                         <a href="#" class="link read-more">Read More</a>
                     </div>
-                    <div class="features-item white">
+                    <div class="features-item white loadable">
                         <div class="features-item-title">
                             <div class="features-item-icon">
                                 <svg>
@@ -326,7 +316,7 @@
                         <p>Phasellus blandit est nulla, at placerat viverra et. Cras eu libero porttitor.</p>
                         <a href="#" class="link read-more">Read More</a>
                     </div>
-                    <div class="features-item white">
+                    <div class="features-item white loadable">
                         <div class="features-item-title">
                             <div class="features-item-icon">
                                 <svg>
@@ -338,7 +328,7 @@
                         <p>Phasellus blandit est nulla, at placerat viverra et. Cras eu libero porttitor.</p>
                         <a href="#" class="link read-more">Read More</a>
                     </div>
-                    <div class="features-item white">
+                    <div class="features-item white loadable">
                         <div class="features-item-title">
                             <div class="features-item-icon">
                                 <svg>
@@ -360,7 +350,7 @@
                 <h2 class="title">Useful Features</h2>
                 <p class="subtitle">Success consists of going from failure to failure without loss of enthusiasm. </p>
                 <div class="useful-features-items">
-                    <div class="features-item white">
+                    <div class="features-item white loadable">
                         <div class="features-item-title">
                             <div class="features-item-icon">
                                 <svg>
@@ -372,7 +362,7 @@
                         <p>Donec sagittis consectetur orci, atum tincidunt purus interdum eget. </p>
                         <a href="#" class="link read-more">Read More</a>
                     </div>
-                    <div class="features-item white">
+                    <div class="features-item white loadable">
                         <div class="features-item-title">
                             <div class="features-item-icon">
                                 <svg>
@@ -511,7 +501,7 @@
             </div>
         </div>
     </section>
-    
+   </main>
     @include('parts/footer.html')
 </body>
 

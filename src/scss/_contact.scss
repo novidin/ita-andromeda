@@ -47,14 +47,10 @@
   color: #ff0000;
 }
 
-
-
 .input:focus::placeholder {
   opacity: 0; 
   transition: opacity 0.3s ease;
 }
-
-
 
 input.input {
   height: 54px;
@@ -102,7 +98,6 @@ textarea.input {
   }
 }
 
-
 .contact-item p::after  {
   content: '';
   display: block;
@@ -114,8 +109,6 @@ textarea.input {
   transform: translateX(-50%);
   background-color: #f2f2f2;
 }
-
-
 
 .contact-icon {
   margin-right: 79px;
@@ -225,7 +218,6 @@ textarea.input {
   &-body {
     margin-bottom: 40px
   }
-    
 }
 
 .overlay{

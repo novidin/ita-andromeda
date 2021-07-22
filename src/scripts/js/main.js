@@ -13,10 +13,38 @@ burger.forEach((btn, index) => {
 	})
 });
 
-
+//active-page-link
+function checkActivePage(pageId) {
+	let navLinks = document.querySelectorAll('.nav-link');
+navLinks.forEach((link) => {
+	if (pageId.id == link.innerHTML.toLowerCase()) {
+		link.classList.add('active');
+	}; 
+});
+};
 //homepage
-const homePage = document.querySelector('#homepage');
+const homePage = document.querySelector('#home');
 if (homePage) {
+	checkActivePage(homePage);
+
+	const loadItems = document.querySelectorAll('.loadable');
+
+	const scrollAnimation = () => {
+		let windowCenter = (window.innerHeight / 1) + window.scrollY;
+		loadItems.forEach(el => {
+			let scrollOffset = el.offsetTop + (el.offsetHeight / 2);
+			if (windowCenter >= scrollOffset) {
+				el.classList.add('load');
+			} else {
+				el.classList.remove('load');
+			}
+		});
+	};
+
+	window.addEventListener('scroll', () => {
+		scrollAnimation();
+	});
+
 	//swiperHero
 	const sliderHero = document.querySelector('.slider-hero');
 
@@ -103,7 +131,6 @@ if (homePage) {
 	let progressBar = document.querySelector('.video-controls .progress-bar');
 	let soundBar = document.querySelector('.video-controls .sound-bar');
 	let expandBtn = document.querySelector('.video-controls .expand');
-	console.log(activeVideo);
 	videos.forEach((vid) => {
 		if (vid.played) {
 			vid.pause();
@@ -196,6 +223,7 @@ if (homePage) {
 		loop: true,
 		loopedSlides: 1,
 		effect: 'fade',
+		lazy: true,
 		pagination: {
 			el: '.swiper-pagination',
 			clickable: true,
@@ -206,9 +234,6 @@ if (homePage) {
 	});
 
 	swiperVideo.on('slideChange', function () {
-		console.log(activeVideo);
-
-		console.log(durTime.innerHTML);
 		videos.forEach((vid) => {
 			if (vid.played) {
 				vid.pause();
@@ -222,9 +247,23 @@ if (homePage) {
 		currTime.innerHTML = '00:00';
 		progressBar.value = 0;
 	});
-}
+};
 
-
+//about
+const aboutPage = document.querySelector('#about');
+if (aboutPage) {
+	checkActivePage(aboutPage);
+};
+//portfolio
+const portfolioPage = document.querySelector('#portfolio');
+if (portfolioPage) {
+  checkActivePage(portfolioPage);
+	addPagination();
+};
+//tesimonials
+const testimonialsPage = document.querySelector('#testimonials');
+if (testimonialsPage) {
+	checkActivePage(testimonialsPage);
 // swiperTestimonials
 const slider = document.querySelector('.slider-main');
 const sliderNav = document.querySelector('.slider-nav');
@@ -247,7 +286,7 @@ let mySwiperNav = new Swiper(sliderNav, {
 			slidesPerView: 3,
 		},
 	}
-})
+});
 
 let mySwiper = new Swiper(slider, {
 	spaceBetween: 10,
@@ -265,13 +304,21 @@ let mySwiper = new Swiper(slider, {
 	thumbs: {
 		swiper: mySwiperNav,
 	}
-})
+});
+
+};
+//faqPage
+const faqPage = document.querySelector('#faq');
+if (faqPage) {
+  checkActivePage(faqPage);
+	addAccordion();
+};
 
 
 //contact page
 const contactPage = document.querySelector('#contact');
 if (contactPage) {
-
+	checkActivePage(contactPage);
 	const disableScroll = () => {
     document.body.dataset.scrollY = window.scrollY; //позиция экрана по Y
     const scrollWidth = window.innerWidth - document.body.offsetWidth // ширина скроллбара
@@ -473,7 +520,5 @@ const enableScroll = () => {
 			});
 		});
 		infowindow.open(map, marker);
-
 	}
-
 }

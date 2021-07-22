@@ -1,0 +1,152 @@
+@font-face {
+  font-family: "Lato-Hairline";
+  font-display: swap;
+  src: url("../fonts/Lato-Hairline.woff") format("woff"), url("../fonts/Lato-Hairline.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Lato-Regular";
+  font-display: swap;
+  src: url("../fonts/Lato-Regular.woff") format("woff"), url("../fonts/Lato-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal; }  
+  
+@font-face {
+  font-family: "Lato-Bold";
+  font-display: swap;
+  src: url("../fonts/Lato-Bold.woff") format("woff"), url("../fonts/Lato-Bold.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal; }  
+      
+@font-face {
+ font-family: "Lato-Black";
+  font-display: swap;
+  src: url("../fonts/Lato-Black.woff") format("woff"), url("../fonts/Lato-Black.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal; }         
+
+body, a {
+  font-family: "Lato-Regular",  sans-serif;
+  font-size: 16px;
+  color: #313131;
+} 
+
+h1 {
+  font-family: "Lato-Hairline", sans-serif;
+  font-size: 10rem;
+}
+
+.navbar-nav .nav-link {
+  color: #313131;
+  transition: text-shadow 1s;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+  color: #431d91;
+  text-shadow: 1px 0px #431d91;
+}
+
+.navbar .navbar-toggler {
+  border-color: transparent;
+}
+
+.navbar .navbar-toggler-icon {
+  opacity: 1;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(49, 49, 49, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); 
+  }
+
+.page-title {
+  height: 200px;
+  background-color: #7952b3;
+}
+
+.card {
+  width: 267px;
+  border: none;
+}
+
+.card-header,
+.card-footer {
+  background-color: #431d91;
+}
+
+.card-header {
+  font-family: "Lato-Bold", sans-serif;
+  font-size: 14px;
+}
+
+.card-body,
+.list-group-item {
+  background-color: #fafafa
+}
+
+.card-text {
+  color: #431d91
+}
+
+.b-best-choise {
+  width: 62px;
+  height: 62px;
+  top: -18px;
+  right: -10px;
+  font-family: "Lato-Black", sans-serif;
+  font-size: 10px;
+  color: #313131;
+  background-color: #e7e7e7;
+}
+
+.read-more {
+  text-decoration: none;
+}
+
+.read-more::after {
+  content: '\2192';
+  margin-left: 14px;
+  transition: 1s;
+}
+
+.card-footer:hover {
+  background-color: #552fa3;
+}
+
+.read-more:hover::after {
+  margin-left: 53%
+}
+
+.pre-footer {
+  background: url(../media/img/bg-footer.jpg) center top/cover no-repeat;
+}
+
+footer .navbar-nav .nav-link {
+  color: #565555;
+  transition: text-shadow 1s;
+}
+
+footer .navbar-nav .nav-link.active,
+footer .navbar-nav .nav-link:hover {
+  color: #989898;
+  text-shadow: 1px 0px #989898;
+}
+
+footer .navbar .navbar-toggler-icon {
+  opacity: 1;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(86, 85, 85, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); 
+  }
+
+
+@media all and (max-width:1000px) {
+  h1 {
+    font-size: 5rem;
+  }
+  .page-title {
+    height: 100px;
+  }
+}
+
+@media all and (max-width:500px) {
+  h1 {
+    font-size: 2rem;
+  }
+}

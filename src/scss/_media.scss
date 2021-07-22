@@ -14,6 +14,10 @@
     margin-bottom: 60px;
   }
 
+  .offer .content {
+    justify-content: center;
+  }
+
   .page-title h1 {
     font-size: 100px;
   }
@@ -106,13 +110,18 @@
   }
 }
 
-@media all and (max-width:768px) {
+@media all and (max-width:770px) {
 .hero-features .wrapper {
   flex-wrap: wrap;
   justify-content: center;
   .hero-features-card {
     margin-bottom: 50px;
   }
+}
+
+.good-looking-design .design-content,
+.useful-features .useful-content {
+  width: 100%;
 }
 
   .footer .footer-nav .wrapper {
@@ -254,6 +263,9 @@
     .content {
       display: block;
     }
+    picture {
+      margin-right: 0;
+    }
   }
 
   .page-title h1 {
@@ -262,6 +274,7 @@
 
   .contact-item {
     margin-top: 20px;
+    width: 100%;
     flex-direction: column;
     p {
       padding: 0 0 10px;
@@ -276,6 +289,7 @@
 
   .adv-icon {
     margin-bottom: 15px;
+    margin-right: 0;
   }
 
   .why-choose {
@@ -301,4 +315,10 @@
   // .features-item {
   //   width: 100%;
   // }
+}
+
+@media all and (max-width:370px) {
+  .pagination {
+    justify-content: center;
+  }
 }

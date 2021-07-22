@@ -30,7 +30,8 @@
     &-link {
       color: #565555;
       transition: text-shadow 1s;
-      &:hover {
+      &:hover,
+      &.active {
         color: #989898;
         text-shadow: 1px 0px #989898;
       }

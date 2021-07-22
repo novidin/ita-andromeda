@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     @include('parts/head.html', {"page" : "testimonials"})
-<body>
+<body id="testimonials">
     @include('parts/header.html')
+   <main>
     @include('parts/pageTitle.html', {"title" : "testimonials"})
     <section class="testimonials page">
         <div class="wrapper">
@@ -73,6 +74,7 @@
                 </div>
         </div>
     </section>
+   </main>
     @include('parts/footer.html')
 </body>
 </html>

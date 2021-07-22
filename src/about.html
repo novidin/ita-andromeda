@@ -2,9 +2,10 @@
 <html lang="en">
 @include('parts/head.html', {"page" : "about"})
 
-<body>
+<body id="about">
   @include('parts/header.html')
-  @include('parts/pageTitle.html', {"title" : "about"})
+  <main>
+    @include('parts/pageTitle.html', {"title" : "about"})
   <section class="about page">
     <div class="wrapper">
       <h2 class="title">Meet Youniverse</h2>
@@ -325,7 +326,7 @@
       </div>
     </div>
   </section>
-
+  </main>
   @include('parts/footer.html')
 </body>
 

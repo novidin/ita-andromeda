@@ -13,17 +13,32 @@
     width: 100%;
     background-color: #f7f7f7;
     .faq-item-arrow {
+      // width: 89px;
+      // height: 21px;
+      // position: absolute;
+      // bottom: -20px;
+      // & svg {
+      //   fill: #f7f7f7;
+
+      // }
       width: 89px;
       height: 21px;
       position: absolute;
-      bottom: -20px;
-      & svg {
-        fill: #f7f7f7;
-      }
+      bottom: -46px;
+      left: -10px;
+      border-style: solid;
+      border-width: 24px 43px;
+      border-color: #f7f7f7 transparent transparent transparent;
+      transform: skew( 
+285deg
+ , 
+-2deg
+ );
     }
     .faq-item-title p {
       text-align: left;
       font-size: 15px;
+      line-height: 1.5;
       &::before {
         content: "Q. ";
         font-family: "Lato-Bold", sans-serif;
@@ -33,9 +48,10 @@
     &-active {
       background-color: #431d91;
       .faq-item-arrow {
-        & svg {
-          fill: #431d91;
-        }
+        border-color: #431d91 transparent transparent transparent;
+        // & svg {
+        //   fill: #431d91;
+        // }
       }
       .faq-item-title {
         color: #fff;

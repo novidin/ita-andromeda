@@ -1,7 +1,5 @@
 
-const portfolioPage = document.querySelector('#portfolio');
-if (portfolioPage) {
-
+function addPagination() {
   let itemsOnPage = 8;
 
   let cards = document.querySelectorAll('.portfolio-card');
@@ -99,7 +97,5 @@ if (portfolioPage) {
   });
 
   startBtn.click();
-
-};
-
+}
 

@@ -4,7 +4,8 @@
 
 <body id="portfolio">
   @include('parts/header.html')
-  @include('parts/pageTitle.html', {"title" : "portfolio"})
+  <main>
+    @include('parts/pageTitle.html', {"title" : "portfolio"})
   <section class="portfolio page">
     <div class="wrapper">
       <ul class="filter-btns">
@@ -216,8 +217,8 @@
         </div>
       </div>
     </div>
-
   </section>
+  </main>
   @include('parts/footer.html')
 </body>
 

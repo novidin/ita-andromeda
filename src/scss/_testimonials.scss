@@ -13,7 +13,7 @@
 	.slider-nav {
 		overflow: hidden;
 		max-width: 990px;
-		margin: 0 auto 29px;
+		margin: 0 auto 15px;
 		flex-shrink: 0;
 		height: 250px;
 	}
@@ -25,9 +25,12 @@
 			content: "";
 			margin: 0 auto;
 			display: block;
-		width: 89px;
-		height: 21px;
-			background: url("../media/img/testimonials/arrowUp-testimonial.png") center top/ cover no-repeat;
+			width: 89px;
+			//height: 21px;
+			border-style: solid;
+			border-width: 20px 50px;
+			border-color: transparent transparent #f6f6f6 transparent;
+			// background: url("../media/img/testimonials/arrowUp-testimonial.png") center top/ cover no-repeat;
 		}
 	}
 
